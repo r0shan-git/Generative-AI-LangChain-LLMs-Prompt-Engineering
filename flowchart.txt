@@ -1,0 +1,129 @@
+make folder name it Generative AI
+open the terminal download the "uv(project manger fast than pip install)"
+make virual envrionment "uv venv"
+in termenial you run "uv init" after that you seen in pyproject.toml
+To install the Langchain Pacakge : uv add langchain
+make file of ".env"
+go to browser type open AI
+signup the open AI and contioue with google
+GO to API Docs
+go to models
+go to quickstart and  click on create a API KEY
+if want to take name of api "GenerativeAI"
+key=""
+go to langchain and click on the integration
+after go openAI model scorol the you seen name of credential (written as OPENAI_API_KEY)
+if you want to free api go to groq api key and
+go to playground and you see so many models and click the create new api
+write name of api genai and click the sumbit button and copy the api key
+api_key=""
+again go to langchain and go to groq and scroll down see the name and after that go to chatgroq and scroll down see name GROQ_API_KEY
+
+go to browser type google ai studio api and login 
+click to create api name and write according to project 
+agian go to the langchain and you see the GOOGLE_API_KEY
+
+simlarily you create mistral.ai and click the api_key
+and make new folder name chatmodels and embeddingmodels
+
+go to the chapgpt give api all  and give prompt( I am going to use all of these api keys can you please provide me the requriment.oZMRwJHakwjtaf6hTfX2lMotWXqeI1OsKf3GfIZAy4JBcWsSUWCccJ8xbCLYQaF8VUe2wEbZ7OT3BlbkFJMJMCZqtUm
+ file to use these model in generative AI)
+ and BTW(by the way ) these api api_key are in .env file and do we rellay need to provide the version
+
+
+enter this command in terminal : uv pip install -r requirements.txt 
+after that go chatmodels inside create chat.py 
+open the langchain go to "models" and see your which api we use according to choose and write code according to your models
+if we use openAI write syntax of openai 
+and simply run and if you are run other api simlary write syntax and run it.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.what is temperature in ai model?
+Ans: Low temperature: more focused ,more predictable ,safer answer 
+if High temperature : more creative, more random,Imaginitive answers 
+temperature=0(very factual,repetitve ,predictable)
+temperature=1(creative,emotional,diverse wordings)
+temperature=2(highly random,unusual,sometimes nonsense)
+
+2.AS per requriment of user you limit token also?
+Ans: max_tokens=20 (only 0 token used if 20 token is finish and stop it there)
+
+---------------------------------------------------------------------------------
+3.You go to hugging face there is more ai model there?
+  1.make signup 
+  2.go to your profile and click it go access token.
+  3.create a new token a name of token is "test_token"
+  4.during creating there is three option of show but click on the read option. after that copy the token.
+  5.paste in .venv file "HUGGINGFACE_ACESSS_TOKEN=""
+  6.MAKE NEW NEW FILE HUGGING_FACE
+  7.write the in requriment.txt name is langchain_huggingface
+  8.hugging face in two way(1.API and 2.Locally)
+  9.go model deepseek-me-R1 model par click 
+  10.model card par jao (use the option hoga) bas tumhe api wala option choose karna hai.
+  11.copy the repo_id paste in folder hugging_face folder.py
+  12.Then create endpoint of huggingface end point.
+       (Endpoint:Model ko retrive karta hai.
+        chathugging face: se apne llam model ko ready karta hoon) 
+
+  13.make the file of localmodel.py
+    (go to hugging face click to model and scroll and search huggingfacepipeline and copy model )
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.we are doing work in embeddingmodels for openAI
+  (embeddingmodels: covert in text into vector(number))
+   1.make folder of embeddings.py and write the code inside 
+   and run in teriminal
+
+5.simlarily taken model of hugging face and make embedding and run file in terminal.
+  (Take free version of hugging face free embedding models)
+  finally sucessful to create the embedding from huggingface
+
+6.go to folder chatmodel make file chatbot.py and write the code as per requirement you solve the problem after that running in terminal.
+
+i want to saved the message =[] 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Problems With Current Short-Term Memory
+
+• No role separation (no system / user / assistant distinction)
+• Uses raw strings → weak conversation structure
+• Memory grows indefinitely
+• Can hit token limits
+• API cost increases over time
+• Response time becomes slower as history grows
+• No trimming mechanism
+• No summarization of old conversations
+• Not production scalable
+• No control over context window
+
+Solution:
+• Use structured messages (SystemMessage, HumanMessage, AIMessage)
+• Implement memory trimming
+• Use conversation summarization
+• Store long-term memory in vector databases (FAISS, ChromaDB)
+• Use ChatMessageHistory / RunnableWithMessageHistory / LangGraph Memory
+
+
+-----------------------------------------------------------------------------------------------------------
+for better result we langchain_core.message add three thing system message,Human message,AI message.
+0(zero se exist hota hai.)
+
+----------------------------------------------------------------------------------------------------------------------------
+7.I make UI give the code in cluade (enter prompt:please create UI for this Ai chat bot using streamlit and don't add any other 
+functionalaity just keep the functionalaity and roles like this and just create the UI)
+
+make your chatbot according to your want :sad ai ,fuuny ai depend on you what type of ai you what to make.(we change only in systemAImessage)
+again change ui give prompt(now add ui to this and give the choice aswell and create a good looking UI)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8.  1.make the folder of cine sage inside make file name is core.py (inside write code)
+    2.give prompt:hello please create a good prompt template for my langchain product and that is extraction of useful information.
+    and I am foing to give a paragraph like this  (today task :- 3movies)
+    and I Want to extract useful information like cast ,movie name ,genre etc think yourself waht else is needed and also generate a quick summary of paragraph.
+    3.nexx prompt :-currently I d'not need json schema
+    4.Run the core.py in terminal and paste movie paragraph.
+    5.paste whole code in claude make streamlit UI
+    (prompt : now create a proper streamlit UI and don't add any other features)
+    6.Again open the terminal and run streamlit
+    (prompt: This code please add the UI using streamlit please)
+
